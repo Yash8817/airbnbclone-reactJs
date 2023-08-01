@@ -9,6 +9,7 @@ import data from './data';
 
 
 function App() {
+  
 
   const cards = data.map(item => {
     return(
@@ -20,6 +21,7 @@ function App() {
         country={item.location}
         title={item.title}
         price={item.price}
+        openSpots={item.openSpots}
       />
 
 
@@ -31,8 +33,9 @@ function App() {
     <div >
       <Navbar />
       <Hero />
+      <div className='cards--list'>
       {cards}      
-
+      </div>
     </div>
   );
 }
